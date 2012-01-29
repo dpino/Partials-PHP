@@ -33,7 +33,7 @@ class Partial {
         } while ($i < $total);
     }
 
-    public static function srender($file, $params) {
+    public static function inline($file, $params) {
         if (!isset($params) || count($params) == 0) {
             return Partial::str_include($file);
         }
