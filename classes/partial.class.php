@@ -38,7 +38,6 @@ class Partial {
             return Partial::str_include($file);
         }
 
-        $result = "";
         $keys = array_keys($params);
         $i = 0; $total = count($keys);
 
@@ -50,10 +49,9 @@ class Partial {
 
             // All variables were created, include file
             if ($i == $total) {
-                include_once($file);
+                return Partials::str_include($file);
             }
         } while ($i < $total);
-        return $result;
     }
 
     public static function str_include($file){
