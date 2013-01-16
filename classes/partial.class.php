@@ -49,7 +49,7 @@ class Partial {
 
             // All variables were created, include file
             if ($i == $total) {
-                return Partials::str_include($file);
+                return Partial::str_include($file);
             }
         } while ($i < $total);
     }
